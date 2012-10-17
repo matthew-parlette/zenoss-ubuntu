@@ -1,4 +1,5 @@
 #!/bin/bash
+log="install.log"
 echo "installing prerequisite software..."
 sudo apt-get -y -qq install subversion
 sudo apt-get -y -qq install mysql-server rabbitmq-server python-dev make swig autoconf
@@ -11,11 +12,11 @@ echo "installing zlib..."
 #(trouble with zlib, install manually)
 #(http://www.techsww.com/tutorials/libraries/zlib/installation/installing_zlib_on_ubuntu_linux.php)
 wget -q http://www.zlib.net/zlib-1.2.7.tar.gz
-tar -xzf zlib-1.2.7.tar.gz
+tar -xzf zlib-1.2.7.tar.gz >> $log
 cd zlib-1.2.7
-./configure --prefix=/usr/local/zlib
-make
-sudo make install
+./configure --prefix=/usr/local/zlib >> $log
+make >> $log
+sudo make install >> $log
 
 echo "adding zenoss user..."
 sudo useradd -m -U -s /bin/bash zenoss
