@@ -37,5 +37,7 @@ echo 'export INSTANCE_HOME=$ZENHOME' >> .bashrc
 echo "downloading zenoss install files..."
 sudo svn --quiet co http://dev.zenoss.org/svn/tags/zenoss-4.2.0/inst /home/zenoss/zenoss-inst
 sudo chown -R zenoss:zenoss /home/zenoss/zenoss-inst
+
+echo "running zenoss installer..."
 sudo su -c /home/zenoss/zenoss-inst/install.sh zenoss
 
