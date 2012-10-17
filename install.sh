@@ -6,7 +6,7 @@ sudo apt-get -y -qq install mysql-server rabbitmq-server python-dev make swig au
 sudo apt-get -y -qq install memcached openjdk-7-jdk maven nagios-plugins-standard
 sudo apt-get -y -qq install bc libmysqlclient-dev
 sudo apt-get -y -qq install build-essential libreadline-dev libsnmp-dev libssl-dev zip unzip
-sudo apt-get -y -qq install libaio1 python-lxml libpng3
+sudo apt-get -y -qq install libaio1 python-lxml libpng3 python-libxml2
 
 echo "installing zlib..."
 #(trouble with zlib, install manually)
@@ -40,5 +40,5 @@ sudo svn --quiet co http://dev.zenoss.org/svn/tags/zenoss-4.2.0/inst /home/zenos
 sudo chown -R zenoss:zenoss /home/zenoss/zenoss-inst
 
 echo "running zenoss installer..."
-sudo su -c /home/zenoss/zenoss-inst/install.sh zenoss
+sudo su -c "cd zenoss-inst;./install.sh" zenoss
 
