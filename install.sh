@@ -10,8 +10,8 @@ sudo apt-get -y -qq install libaio1 libpython-lxml libpng3
 echo "installing zlib..."
 #(trouble with zlib, install manually)
 #(http://www.techsww.com/tutorials/libraries/zlib/installation/installing_zlib_on_ubuntu_linux.php)
-wget http://www.zlib.net/zlib-1.2.7.tar.gz
-tar -xvzf zlib-1.2.7.tar.gz
+wget -q http://www.zlib.net/zlib-1.2.7.tar.gz
+tar -xzf zlib-1.2.7.tar.gz
 cd zlib-1.2.7
 ./configure --prefix=/usr/local/zlib
 make
@@ -37,6 +37,7 @@ echo 'export PATH=$ZENHOME/bin:$PATH' >> .bashrc
 echo 'export INSTANCE_HOME=$ZENHOME' >> .bashrc
 
 echo "downloading zenoss install files..."
-svn co http://dev.zenoss.org/svn/tags/zenoss-4.2.0/inst zenoss-inst
+sudo svn --quiet co http://dev.zenoss.org/svn/tags/zenoss-4.2.0/inst /home/zenoss/zenoss-inst
+sudo chown -R zenoss:zenoss /home/zenoss/zenoss-inst
 cd zenoss-inst
 
