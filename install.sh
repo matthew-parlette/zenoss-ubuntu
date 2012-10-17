@@ -5,7 +5,7 @@ sudo apt-get -y -qq install mysql-server rabbitmq-server python-dev make swig au
 sudo apt-get -y -qq install memcached openjdk-7-jdk maven nagios-plugins-standard
 sudo apt-get -y -qq install bc libmysqlclient-dev
 sudo apt-get -y -qq install build-essential libreadline-dev libsnmp-dev libssl-dev zip unzip
-sudo apt-get -y -qq install libaio1 libpython-lxml libpng3
+sudo apt-get -y -qq install libaio1 python-lxml libpng3
 
 echo "installing zlib..."
 #(trouble with zlib, install manually)
