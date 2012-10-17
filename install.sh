@@ -33,10 +33,10 @@ sudo rabbitmqctl add_vhost /zenoss
 sudo rabbitmqctl set_permissions -p /zenoss zenoss '.*' '.*' '.*'
 
 echo "setting up zenoss user environment..."
-echo 'export ZENHOME=/usr/local/zenoss' >> .bashrc
-echo 'export PYTHONPATH=$ZENHOME/lib/python' >> .bashrc
-echo 'export PATH=$ZENHOME/bin:$PATH' >> .bashrc
-echo 'export INSTANCE_HOME=$ZENHOME' >> .bashrc
+sudo echo 'export ZENHOME=/usr/local/zenoss' >> /home/zenoss/.bashrc
+sudo echo 'export PYTHONPATH=$ZENHOME/lib/python' >> /home/zenoss/.bashrc
+sudo echo 'export PATH=$ZENHOME/bin:$PATH' >> /home/zenoss/.bashrc
+sudo echo 'export INSTANCE_HOME=$ZENHOME' >> /home/zenoss/.bashrc
 
 echo "downloading zenoss install files..."
 sudo svn --quiet co http://dev.zenoss.org/svn/tags/zenoss-4.2.0/inst /home/zenoss/zenoss-inst
