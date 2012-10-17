@@ -9,7 +9,7 @@ echo "installing prerequisite software..."
 #sudo apt-get -y -qq install libaio1 python-lxml libpng3 python-libxml2 libxml++2
 
 #try 2
-sudo apt-get -y -qq install openjdk-7-jdk maven mysql-server mysql-client libmysqlclient-dev rrdtool librrd-dev python python-dev python-setuptools ccache unzip swig autoconf gcc-4.4 build-essential libsnmp-base libsnmp15 xnmp xnmpd libsnmp-dev libxml2-dev libxslt1-dev libcairo2-dev libglib2.0-dev libpango1.0-dev erlang libevent-dev memcached rabbitmq-server tk unixodbc subversion libreadline6-dev
+sudo apt-get -y -qq install openjdk-7-jdk maven mysql-server mysql-client libmysqlclient-dev rrdtool librrd-dev python python-dev python-setuptools ccache unzip swig autoconf gcc-4.4 build-essential libsnmp-base libsnmp15 snmp snmpd libsnmp-dev libxml2-dev libxslt1-dev libcairo2-dev libglib2.0-dev libpango1.0-dev erlang libevent-dev memcached rabbitmq-server tk unixodbc subversion libreadline6-dev
 
 echo "installing zlib..."
 #(trouble with zlib, install manually)
