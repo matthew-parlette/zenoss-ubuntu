@@ -42,6 +42,17 @@ echo "downloading zenoss install files..."
 sudo svn --quiet co http://dev.zenoss.org/svn/tags/zenoss-4.2.0/inst /home/zenoss/zenoss-inst
 sudo chown -R zenoss:zenoss /home/zenoss/zenoss-inst
 
-echo "running zenoss installer..."
-sudo su -c "cd zenoss-inst;./install.sh" zenoss
+echo "################################"
+echo "# System is ready"
+echo "#"
+echo "# Now run the following commands"
+echo "# $ sudo su - zenoss"
+echo "# $ cd zenoss-inst"
+echo "# $ ./install.sh"
+echo "################################"
+
+#TODO
+#The following doesn't work
+#echo "running zenoss installer..."
+#sudo su -c "cd zenoss-inst;./install.sh" zenoss
 
